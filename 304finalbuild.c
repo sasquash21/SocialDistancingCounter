@@ -46,23 +46,9 @@ bool justLeft6ftZone = true;
 double runUltraSonic();
 void disp3Digits(int distance);
 
-//NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
-
-// ISR(PCINT0_vect) {
-//     if(PINB & (1<<ECHO))
-//     {
-//         TCNT1 = 0;
-//     } else { 
-//         pulse_len = TCNT1;
-//     }
-// }
 
 void initialize() {
     //for UltraSonic Sensor
-    //PCICR |= (1<<PCIE0);
-    //PCMSK0 |= (1<<PCINT0);
-    //sei();
-    //TCCR1B = (0<<CS12) | (1<<CS11) | (1<<CS10);
     DDRB |= (1<<TRIG); // Sets the trigPin as an OUTPUT
     DDRB &= ~ (1<<ECHO); // Sets the echoPin as an INPUT
   
